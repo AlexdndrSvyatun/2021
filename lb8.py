@@ -4,7 +4,7 @@ import math
 xarr = [1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
 yarr = [10.517, 10.193, 9.807, 9.387, 8.977, 8.637]
 
-h = xarr[1] - xarr[0]
+h = xarr[2] - xarr[0]
 
 def y(yarr, k):
 
