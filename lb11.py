@@ -35,8 +35,7 @@ show = False, legend = True)
 p2 = sp.plot(taylor_x, (x, -2, 2), label = "ff(x)",
 line_color = "#000000", show = False)
 
-p3 = sp.plot(x, (x, -2, 2), show = False, line_color = "#ff7b00")
+
 
 p1.append(p2[0])
-p1.append(p3[0])
 p1.show()
