@@ -75,4 +75,4 @@ def tr_fun(trapezoid, a, b, n):
 
 v, err = integrate.quad(trapezoid, 1.4, 2.1)
 print("Trapezoid = ", tr_fun(trapezoid, 1.4, 2.1, 20))
-print('Trapezoid check  m = ', v)
+print('Trapezoid check   = ', v)
