@@ -4,8 +4,8 @@ from numpy import *
 import sympy as sp
 from matplotlib import style
 
-x = [0, 0.2, 0.5, 0.9, 1.5]
-y = [1.75, 2.68, 1.24, 0.72, 1.35]
+x = [0.7, 1.1, 1.4, 1.9, 2.6]
+y = [2.75, 3.87, 1.25, 4.26, 2.43]
 
 
 
@@ -64,7 +64,7 @@ def spline_fun(xk):
         i -= 1
     #print(b)
 
-    print('\nThe spline:\n')
+    print('\nspline:\n')
     for i in range(len(c)-1):
         s_i = a[i] + b[i+1]*(x_i - x[i]) + c[i]*((x_i-x[i])**2) + d[i+1]*((x_i-x[i])**3)
         print(s_i)
@@ -73,7 +73,7 @@ def spline_fun(xk):
         s_ij = a[i] + b[i+1]*(x_j - x[i]) + c[i]*((x_j-x[i])**2) + d[i+1]*((x_j-x[i])**3)
         return s_ij
 
-    print('\n\nValues of the spline at given points:\n')
+    print('\n\nspline:\n')
     for i in range(len(x)-1):
         print(spline(i, x[i]))
     print('\n')
@@ -103,14 +103,14 @@ spl1 = UnivariateSpline(x, y)
 
 style.use('seaborn-whitegrid')
 
-plt.plot( xs, spl, color = '#316879')
-plt.plot(xs, spl1(xs), '--', color = '#7fe7dc')
-plt.plot(x, y, '*', color = '#f47a60' )
+plt.plot( xs, spl, color = '#008B8B')
+plt.plot(xs, spl1(xs), '--', color = '#000000')
+plt.plot(x, y, '.', color = '#FF0000' )
 
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Spline plot')
-plt.legend(['my spline', 'UnivariateSpline', 'input data'])
+plt.title('Spline ')
+plt.legend(['spline color', 'UnivariateSpline', 'data'])
 
 plt.show()
 
